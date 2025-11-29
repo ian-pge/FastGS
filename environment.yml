@@ -13,8 +13,11 @@ dependencies:
   - torchvision=0.13.1
   - tqdm
   - websockets
-  - opencv-python
   - pip:
     - submodules/diff-gaussian-rasterization_fastgs
     - submodules/simple-knn
     - submodules/fused-ssim
+    - opencv-python
+    - imageio
+    - lpips
+    - scipy
