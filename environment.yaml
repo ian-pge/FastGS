@@ -18,6 +18,5 @@ dependencies:
     - submodules/simple-knn
     - submodules/fused-ssim
     - matplotlib
-    - torchmetrics==1.2.0
     - opencv_python
     - scipy

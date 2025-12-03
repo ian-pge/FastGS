@@ -61,7 +61,7 @@ We provide a streamlined setup using Conda:
 SET DISTUTILS_USE_SDK=1
 
 # Create and activate environment
-conda env create --file environment.yml
+conda env create --file environment.yaml
 conda activate fast-dropgaussian
 ```
 
