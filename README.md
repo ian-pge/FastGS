@@ -90,7 +90,7 @@ Next, download the DropGaussian-processed sparse and dense point clouds from thi
 ### ⚡ Fast-D3DGS
 
 ```bash
-bash train.sh
+bash train_llff.sh
 ```
 <details>
 <summary><span style="font-weight: bold;">📋 Advanced: Command Line Arguments for train.py</span></summary>
