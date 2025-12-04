@@ -233,6 +233,11 @@ Our 3DGS representation is identical to vanilla 3DGS, so you can use the officia
 | Memory Usage | ✅ **Low Footprint** | ❌ High Demand |
 | Task Versatility | ✅ **6 Domains** | ❌ Limited Scope |
 
+## 📧 Contact
+
+If you have any questions, please contact us at **renshiwei@mail.nankai.edu.cn**.
+
+
 ## 🙏 Acknowledgements
 
 This project is built upon [3DGS](https://github.com/graphdeco-inria/gaussian-splatting), [Taming-3DGS](https://github.com/humansensinglab/taming-3dgs), [Speedy-Splat](https://github.com/j-alex-hanson/speedy-splat), and [Abs-GS](https://github.com/TY424/AbsGS). We extend our gratitude to all the authors for their outstanding contributions and excellent repositories!
