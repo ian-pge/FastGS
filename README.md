@@ -29,14 +29,17 @@ FastGS is a **general acceleration framework** that supercharges 3D Gaussian Spl
 ### 🔥 **[2025.12.03]** The sparse-view reconstruction code [Fast-DropGaussian](https://github.com/fastgs/FastGS/tree/fast-dropgaussian) has been released!
 
 ### 🎯 Coming Soon
-- **[2025.12.31]** 🎯 **Multi-Task Expansion**:
-  - Dynamic scenes Reconstruction: [Deformable-3D-Gaussians](https://github.com/ingra14m/Deformable-3D-Gaussians)
-  - Autonomus Driving scene: [street_gaussians](https://github.com/zju3dv/street_gaussians)
-  - Surface reconstruction: [PGSR](https://github.com/zju3dv/PGSR)
-  - Sparse-view Reconstruction: [DropGaussian](https://github.com/DCVL-3D/DropGaussian_release)
-  - Large-scale Reconstruction: [OctreeGS](https://github.com/city-super/Octree-GS/tree/main)
-  - SLAM: [Photo-SLAM](https://github.com/HuajianUP/Photo-SLAM)
-- **[2025.12.31]** 🔌 **Backbone Enhancing**: popular 3DGS variants ([Vanilla 3DGS](https://github.com/graphdeco-inria/gaussian-splatting), [Scaffold-GS](https://github.com/city-super/Scaffold-GS), [Mip-splatting](https://github.com/autonomousvision/mip-splatting), [Taming-3DGS](https://github.com/humansensinglab/taming-3dgs))
+
+#### Released Modules
+- **Dynamic Scenes Reconstruction** — [Fast-D3DGS](https://github.com/fastgs/FastGS/tree/fast-d3dgs) (based on [Deformable-3D-Gaussians](https://github.com/ingra14m/Deformable-3D-Gaussians)) — Released
+- **Sparse-view Reconstruction** — [Fast-DropGaussian](https://github.com/fastgs/FastGS/tree/fast-dropgaussian) (based on [DropGaussian](https://github.com/DCVL-3D/DropGaussian_release)) — Released  
+
+#### To Be Released After Paper Acceptance
+- **Autonomous Driving Scenes** — [street_gaussians](https://github.com/zju3dv/street_gaussians)
+- **Surface Reconstruction** — [PGSR](https://github.com/zju3dv/PGSR)  
+- **Large-scale Reconstruction** — [OctreeGS](https://github.com/city-super/Octree-GS/tree/main)
+- **SLAM** — [Photo-SLAM](https://github.com/HuajianUP/Photo-SLAM)  
+- **Backbone Enhancing** — [Mip-splatting](https://github.com/autonomousvision/mip-splatting)
 
 
 ## 🏗️ Training Framework
