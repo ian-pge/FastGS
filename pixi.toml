@@ -8,7 +8,7 @@ platforms = ["linux-64"]
 
 [tasks]
 train = "python train.py"
-train-vitto = "python train.py -s datasets/vitto/smf_colmap/undistorted --resolution 1"
+train-vitto = "python train.py -s datasets/vitto/smf_colmap/undistorted --resolution 1 --n_views -1"
 
 [system-requirements]
 cuda = "11.6"

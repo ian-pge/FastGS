@@ -104,7 +104,10 @@ def readColmapCameras(cam_extrinsics, cam_intrinsics, images_folder, path, rgb_m
         uid = intr.id
         R = np.transpose(qvec2rotmat(extr.qvec))
         T = np.array(extr.tvec)
-        bounds = np.load(os.path.join(path, 'poses_bounds.npy'))[idx, -2:]
+        try:
+            bounds = np.load(os.path.join(path, 'poses_bounds.npy'))[idx, -2:]
+        except:
+            bounds = np.array([0.1, 100.0])
         K = np.eye(3)
         K[0,0] = intr.params[0]
         K[1,1] = intr.params[1]
@@ -171,7 +174,7 @@ def storePly(path, xyz, rgb):
 def readColmapSceneInfo(path, images, eval, n_views=3, llffhold=8):
     ply_path = os.path.join(path, "sparse/0/points3D.ply")
     bin_path = os.path.join(path, "sparse/0/points3D.bin")
-    ply_path = os.path.join(path, str(n_views) + "_views/dense/fused.ply")
+    # ply_path = os.path.join(path, str(n_views) + "_views/dense/fused.ply")
 
     try:
         cameras_intrinsic_file = os.path.join(path, "sparse/0", "cameras.bin")
