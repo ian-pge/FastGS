@@ -65,6 +65,26 @@ conda env create --file environment.yaml
 conda activate fast-dropgaussian
 ```
 
+ Alternatively, use **Pixi** (Recommended for this setup):
+
+```bash
+# Install environment
+pixi install
+
+# Run training
+pixi run train -s <path_to_source> -m <path_to_output>
+```
+
+### 📊 Visualization
+
+**Tensorboard** is enabled for monitoring loss and metrics:
+```bash
+pixi run tensorboard --logdir output
+```
+
+**Real-time Viewer**:
+The training script starts a server on port `6009` (or specified via `--port`). You can connect a SIBR remote viewer to this port to see the Gaussian Splatting training in real-time.
+
 ### 🗂️ Data Preparation
 
 First, download the LLFF Dataset from the [official website](https://www.kaggle.com/datasets/arenagrenade/llff-dataset-full).
