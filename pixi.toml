@@ -3,7 +3,7 @@ name = "fast-dropgaussian"
 version = "0.1.0"
 description = "Pixi environment for fast-dropgaussian"
 authors = ["User <user@example.com>"]
-channels = ["conda-forge", "pytorch", "nvidia"]
+channels = ["conda-forge", "nvidia", "pytorch"]
 platforms = ["linux-64"]
 
 [tasks]
@@ -15,23 +15,33 @@ cuda = "11.6"
 [dependencies]
 python = "3.9.*"
 pytorch = "1.12.1"
-torchvision = "0.13.1"
-torchaudio = "0.12.1"
+pytorch-gpu = "1.12.1"
 cudatoolkit = "11.6.*"
-pytorch-mutex = { version = "1.0", build = "cuda", channel = "pytorch" }
 
-nvcc_linux-64 = "11.6.*"
-cxx-compiler = "*"
+# Nvidia components
+cuda-nvcc = { version = "11.6.*", channel = "nvidia" }
+cuda-cudart = { version = "11.6.*", channel = "nvidia" }
+cuda-cudart-dev = { version = "11.6.*", channel = "nvidia" }
+cuda-driver-dev = { version = "11.6.*", channel = "nvidia" }
+cuda-cccl = { version = "11.6.*", channel = "nvidia" }
+# Ensure we stay on GCC 11 for CUDA 11.6 compat
+gxx_linux-64 = "11.*"
+gcc_linux-64 = "11.*"
+
 ninja = "*"
 tqdm = "*"
 pip = "*"
+# Move standard datascience stack to conda-forge
+matplotlib = "*"
+opencv = "*"     # using 'opencv' (conda) instead of 'opencv-python' (pypi)
+scipy = "*"
 plyfile = "*"
 websockets = "*"
 
 [pypi-dependencies]
-matplotlib = "*"
-opencv-python = "*"
-scipy = "*"
+# Vision/Audio must be PyPI to match PyTorch 1.12.1 (missing on conda-forge for this combo)
+torchvision = "==0.13.1"
+torchaudio = "==0.12.1"
 diff-gaussian-rasterization-fastgs = { path = "./submodules/diff-gaussian-rasterization_fastgs", editable = true }
 simple-knn = { path = "./submodules/simple-knn", editable = true }
 fused-ssim = { path = "./submodules/fused-ssim", editable = true }
