@@ -93,6 +93,18 @@ conda env create --file environment.yml
 conda activate fastgs
 ```
 
+### ⚡ Pixi Setup (Alternative)
+
+We also provide a [Pixi](https://pixi.sh/) environment for a faster and reproducible setup:
+
+```bash
+# Install dependencies
+pixi install
+
+# Activate the environment shell
+pixi shell
+```
+
 ### 📂 Dataset Organization
 
 Organize your datasets in the following structure:
