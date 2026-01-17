@@ -70,10 +70,26 @@ conda activate fast-dropgaussian
 ```bash
 # Install environment
 pixi install
-
-# Run training
-pixi run train -s <path_to_source> -m <path_to_output>
 ```
+
+**Quick Start for Vitto Dataset:**
+
+We have pre-configured a task for the Vitto dataset that handles paths and ensures all images are used (`--n_views -1`).
+
+```bash
+# Run training with custom iterations
+pixi run train-vitto --iterations 3000
+```
+
+**Generic Usage:**
+
+To run on other datasets or with custom parameters:
+
+```bash
+pixi run train -s <path_to_source> -m <path_to_output> --iterations <N>
+```
+
+> **Note**: For standard Colmap datasets, you might need to add `--n_views -1` to ensuring all images are used, as the default is 3 (for sparse checks).
 
 ### 📊 Visualization
 
