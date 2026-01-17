@@ -1,0 +1,37 @@
+[workspace]
+name = "fast-dropgaussian"
+version = "0.1.0"
+description = "Pixi environment for fast-dropgaussian"
+authors = ["User <user@example.com>"]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tasks]
+train = "python train.py"
+
+[dependencies]
+python = "3.9.*"
+pytorch = "1.12.*"
+# Dropped vision/audio as they are blocking resolution on conda-forge
+cudatoolkit = "11.6.*"
+nvcc_linux-64 = "11.6.*"
+cxx-compiler = "*"
+ninja = "*"
+tqdm = "*"
+pip = "*"
+plyfile = "*"
+websockets = "*"
+
+[pypi-dependencies]
+matplotlib = "*"
+opencv-python = "*"
+scipy = "*"
+diff-gaussian-rasterization-fastgs = { path = "./submodules/diff-gaussian-rasterization_fastgs", editable = true }
+simple-knn = { path = "./submodules/simple-knn", editable = true }
+fused-ssim = { path = "./submodules/fused-ssim", editable = true }
+
+[pypi-options]
+no-build-isolation = ["diff-gaussian-rasterization-fastgs", "simple-knn", "fused-ssim"]
+
+[activation]
+env = { CUDA_HOME = "$CONDA_PREFIX" }
