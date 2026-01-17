@@ -39,6 +39,9 @@ scipy = "*"
 plyfile = "*"
 websockets = "*"
 tensorboard = ">=2.20.0,<3"
+pillow = "<10.0.0"
+libgl = "*"
+numpy = "<1.24"
 
 [pypi-dependencies]
 # Vision/Audio must be PyPI to match PyTorch 1.12.1 (missing on conda-forge for this combo)
