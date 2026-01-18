@@ -50,8 +50,8 @@ rembg = "*"
 torchvision = "==0.13.1"
 torchaudio = "==0.12.1"
 diff-gaussian-rasterization-fastgs = { path = "./submodules/diff-gaussian-rasterization_fastgs", editable = true }
-simple-knn = { path = "./submodules/simple-knn", editable = true }
-fused-ssim = { path = "./submodules/fused-ssim", editable = true }
+simple-knn = { path = "./submodules/simple-knn"}
+fused-ssim = { path = "./submodules/fused-ssim"}
 
 [pypi-options]
 no-build-isolation = ["diff-gaussian-rasterization-fastgs", "simple-knn", "fused-ssim"]
