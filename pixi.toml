@@ -49,7 +49,7 @@ rembg = "*"
 # Vision/Audio must be PyPI to match PyTorch 1.12.1 (missing on conda-forge for this combo)
 torchvision = "==0.13.1"
 torchaudio = "==0.12.1"
-diff-gaussian-rasterization-fastgs = { path = "./submodules/diff-gaussian-rasterization_fastgs", editable = true }
+diff-gaussian-rasterization-fastgs = { path = "./submodules/diff-gaussian-rasterization_fastgs"}
 simple-knn = { path = "./submodules/simple-knn"}
 fused-ssim = { path = "./submodules/fused-ssim"}
 
